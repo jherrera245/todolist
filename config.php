@@ -87,8 +87,8 @@ function eliminar($id) {
 function listar($filtro) {
     $conexion = conectar();
     $json = array();
-    $param = ($filtro == 0 || $filtro == 1) ?  "WHERE status = $filtro" : "";
-    $query = "SELECT * FROM tareas  $param";
+    $param = ($filtro == 0 || $filtro == 1) ?  "WHERE status = '$filtro'" : "";
+    $query = "SELECT * FROM tareas  $param ORDER BY fecha ASC";
     
     $result = mysqli_query($conexion, $query);
     

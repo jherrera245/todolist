@@ -40,7 +40,7 @@
     
     //listar las tareas
     if ($accion == "listar") {
-        $filtro = (isset($_POST["filtro"])) ? $_POST["filtro"] : 0;
+        $filtro = (isset($_POST["filtro"])) ?  $_POST["filtro"] : 0;
         $datos["estado"] = true;
         $datos["resultado"] = listar($filtro);
     }
